@@ -7,11 +7,11 @@ const createLogo = (data) => {
     //imlement user's shape + background color
     let shapeElement;
         if (shape === circle){
-            <circle fill="${background}" cx="150" cy="100" r="80"/>
+           shapeElement = <circle fill="${background}" cx="150" cy="100" r="80"/>
         } else if (shape === rectangle){
-            <rect fill="${background}" x="100" y="100" height="50" width="50"/>
+           shapeElement = <rect fill="${background}" x="100" y="100" height="50" width="50"/>
         } else {
-            <polygon points="250,60 100,400 400,400"/>
+           shapeElement = <polygon points="250,60 100,400 400,400"/>
         }
  
     //take both elements and formulate the logo
