@@ -25,7 +25,8 @@ const entries = inquirer.prompt([{
 ])  //after entries are filled, do the work to get back the logo
 .then((data) => {
     const svgContent = createLogo(data)
-    fs.writeFile('logo.svg', svgContent, (err) => {
+    const filePath = './library/shapes.js'
+    fs.writeFile(filePath, 'logo.svg', svgContent, (err) => {
         if (err) console.error(err);
         else console.log('logo created successfuly');
   })

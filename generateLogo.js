@@ -14,12 +14,14 @@ const createLogo = (data) => {
             <polygon points="250,60 100,400 400,400"/>
         }
  
-
+    //take both elements and formulate the logo
     const svgContent = `
     <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
     ${textElement}
     ${shapeElement}
-    </svg>`
+    </svg>`;
+
+    return svgContent;
 }
 
 
