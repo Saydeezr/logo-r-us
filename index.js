@@ -6,7 +6,7 @@ const { default: Choices } = require('inquirer/lib/objects/choices.js');
 const entries = inquirer.prompt([{
     type: 'input',
     message: 'Type in up to 3 letters for your logo:',
-    name:'letter'
+    name:'letters'
 }, {
     type: 'input',
     message: 'Type a color for the text on your logo:',
