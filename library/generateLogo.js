@@ -1,5 +1,4 @@
-const createLogo = (data) => {
-   class Svg{
+class Svg{
       constructor(){
          this.shapeElement = ''
          this.textElement = ''
@@ -14,6 +13,7 @@ const createLogo = (data) => {
          this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${initials}</text>`
       }
    }
+   //const createLogo = (data) => {
    //  const { initials, textColor, background, shape } = data;
 
     //implement user's initials + text color
@@ -37,7 +37,7 @@ const createLogo = (data) => {
    //  </svg>`;
 
    // return svgContent;
-  }
+  //}
 
 
 
