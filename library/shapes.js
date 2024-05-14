@@ -24,4 +24,4 @@ class Triangle extends Shape{
         return `<polygon fill="${background}" height='100%' width='100%' points="0,200 300,200 150,0"/>`
     }
 }
-module.export = { Circle, Square, Triangle }
+module.exports = { Circle, Square, Triangle }
