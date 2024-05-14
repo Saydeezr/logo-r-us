@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createLogo = require('./library/generateLogo')
+const Svg = require('./library/svgClass.js')
 const { default: Choices } = require('inquirer/lib/objects/choices.js');
 const { Circle, Square, Triangle} = require('./library/shapes.js')
 
@@ -26,7 +26,7 @@ const entries = inquirer.prompt([{
 }
 ])  //after entries are filled, do the work to get back the logo
 .then(async(data) => {
-    const svgContent = createLogo(data)
+    const svgContent = Svg
     const filePath = './library/logo.svg'
     fs.writeFile(filePath, svgContent, (err) => {
         if (err) console.error(err);
@@ -35,7 +35,12 @@ const entries = inquirer.prompt([{
 
 
 
-class Svg{}
+
+
+
+
+
+
   // const util = require('util')
 // const promiseFs = util.promisify(fs.writeFile)
 

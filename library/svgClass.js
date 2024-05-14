@@ -1,19 +1,26 @@
-class Svg{
-      constructor(){
-         this.shapeElement = ''
-         this.textElement = ''
-      }
-      setContent(){
-         svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"></svg>`
-      }
-      setShapeElement(shape){
-         this.shapeElement = shape.render();
-      }
-      setTextElement(textColor,initials){
-         this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${initials}</text>`
-      }
-   }
-   //const createLogo = (data) => {
+class Svg{constructor(){
+   this.shapeElement = ''
+   this.textElement = ''
+}
+render(){
+   return`<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"></svg>`
+}
+setShapeElement(shape){
+   this.shapeElement = shape.render();
+}
+setTextElement(textColor,initials){
+   this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${initials}</text>`
+}}
+  
+module.exports = Svg;  
+  
+
+
+
+
+
+
+  //const createLogo = (data) => {
    //  const { initials, textColor, background, shape } = data;
 
     //implement user's initials + text color
@@ -41,4 +48,4 @@ class Svg{
 
 
 
-module.exports = createLogo;
+//module.exports = createLogo;
