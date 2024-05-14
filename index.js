@@ -26,7 +26,8 @@ const entries = inquirer.prompt([{
 }
 ])  //after entries are filled, do the work to get back the logo
 .then(async(data) => {
-    const svgContent = Svg
+    const svg = new Svg();
+    const svgContent = svg.render();
     const filePath = './library/logo.svg'
     fs.writeFile(filePath, svgContent, (err) => {
         if (err) console.error(err);

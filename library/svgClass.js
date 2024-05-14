@@ -1,4 +1,5 @@
-class Svg{constructor(){
+class Svg {
+   constructor(){
    this.shapeElement = ''
    this.textElement = ''
 }
