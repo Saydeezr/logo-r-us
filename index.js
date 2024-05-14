@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const createLogo = require('./library/generateLogo')
 const { default: Choices } = require('inquirer/lib/objects/choices.js');
+const { Circle, Square, Triangle} = require('./library/shapes.js')
 
 
 // prompts on CLI for user to input answers
@@ -34,7 +35,7 @@ const entries = inquirer.prompt([{
 
 
 
-
+class Svg{}
   // const util = require('util')
 // const promiseFs = util.promisify(fs.writeFile)
 
