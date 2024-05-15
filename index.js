@@ -27,8 +27,26 @@ const entries = inquirer.prompt([{
 ])  //after entries are filled, do the work to get back the logo
 .then(async(data) => {
     const svg = new Svg();
-    const svgContent = svg.render();
     const filePath = './library/logo.svg'
+
+    svg.setTextElement(data.initials, data.textColor)
+    let shape;
+    switch (data.shape) {
+        case 'Circle':
+            shape = new Circle();
+            break;
+        case 'Square':
+            shape = new Square();
+            break;
+        case 'Triangle':
+            shape = new Triangle();
+            break;
+        default:
+            break;
+    }
+    shape.setColor(data.background)
+    svg.setShapeElement(shape)
+    const svgContent = svg.render();
     fs.writeFile(filePath, svgContent, (err) => {
         if (err) console.error(err);
         else console.log('Generated logo.svg');
